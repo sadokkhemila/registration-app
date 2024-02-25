@@ -12,9 +12,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                
-                sh 'mvn clean install '
-                
+                dir ('webapp') {
+                sh 'mvn package '
+                }                 
             }
         }
     }
