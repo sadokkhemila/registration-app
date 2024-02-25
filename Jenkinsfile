@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('checkout from git') {
             steps {
-               git branch: 'main' , url: 'https://github.com/sadokkhemila/registration-app.git'
+               git branch: 'main', url: 'https://github.com/sadokkhemila/registration-app.git'
             }
         }
         stage('Build') {
