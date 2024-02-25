@@ -3,7 +3,7 @@ pipeline {
     tools {
         maven 'maven'
     }
-    environement {
+    environment {
         SCANNER_HOME = tool 'sonarqube'
     }
    
