@@ -1,11 +1,16 @@
 pipeline {
     agent any
-
+    tools {
+        maven "maven"
+    }
     stages {
-        stage('Hello') {
+        stage('checkout from git') {
             steps {
-                echo 'Hello World'
+               git branch: 'main' , url: 'https://github.com/sadokkhemila/registration-app.git'
             }
         }
+        stage('') {
+            steps {
+            }
     }
 }
