@@ -23,7 +23,7 @@ pipeline {
         stage('test sonarqube'){
             steps{
                 withSonarQubeEnv('sonar-scanner') {
-                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=maven\
+                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=maven\ -Dsonar.login=sqp_016b44368cfc83fa2586dbb4f4b3cda4ae0e6084\
                     -Dsonar.projectKey=maven '''
                 }
             }
