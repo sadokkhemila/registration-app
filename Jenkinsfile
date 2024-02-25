@@ -4,7 +4,7 @@ pipeline {
         maven 'maven'
     }
     environment {
-    DOCKERHUB_CREDENTIALS = credentials('github-login')
+    //DOCKERHUB_CREDENTIALS = credentials('github-login')
     //REMOTE_SERVER = 'your-remote-server-ip'
    //REMOTE_USER = 'your-remote-server-user' 	  	  
   }
