@@ -4,7 +4,7 @@ pipeline {
         maven 'maven'
     }
     environment {
-        SCANNER_HOME = tool 'sonarqube'
+        SCANNER_HOME = tool 'sonar-scanner'
     }
    
     stages {
@@ -22,7 +22,7 @@ pipeline {
         }
         stage('test sonarqube'){
             steps{
-                withSonarQubeEnv('sonarqube') {
+                withSonarQubeEnv('sonar-scanner') {
                     sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectName=maven\
                     -Dsonar.projectKey=maven '''
                 }
